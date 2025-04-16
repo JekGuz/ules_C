@@ -11,87 +11,81 @@ namespace ules_C
     {
         public static void Main(string[] args)
         {
-                        // 2 OSA kordused, Massivid, Listid, Klassid
-            List<string> sonad = new List<string>();
-            for (int j = 0; j < 5; j++)
-            {
-                Console.WriteLine("Nimi: ");
-                sonad.Add(Console.ReadLine());
-            }
-            foreach (var item in sonad)
-            {
-                Console.WriteLine(item);
-            }
-
-            Isik isik1 = new Isik("Juku", 18, "123456781234", "Tallinn", Sugu.Mees);
-            isik1.PrindiInfo();
-            Isik isik2 = new Isik();
-            isik2.Nimi = "Mari";
-            isik2.Aadress = "Tartu";
-            isik2.Isikukood = "56874545454";
-            isik2.Sugu = Sugu.Naine;
-            isik2.PrindiInfo();
+            //----------------------------C# Kordused ja massiivid. Teoria+Ülesanded---------------------
+            Console.WriteLine("-------Mang---------");
+            funktionide_Class_2_osa.KuniMärksõnani("Eleavant", "Osta elevant ära!");
 
 
+            //////2 OSA kordused, Massivid, Listid, Klassid
+            //////List<string> sonad = funktionide_Class_2_osa.s6nad();
+            //////foreach (var item in sonad)
+            //////{
+            //////    Console.WriteLine(item);
+            //////}
+
+            //////Isik isik1 = new Isik("Juku", 18, "123456781234", "Tallinn", Sugu.Mees);
+            //////isik1.PrindiInfo();
+            //////Isik isik2 = new Isik();
+            //////isik2.Nimi = "Mari";
+            //////isik2.Aadress = "Tartu";
+            //////isik2.Isikukood = "56874545454";
+            //////isik2.Sugu = Sugu.Naine;
+            //////isik2.PrindiInfo();
 
 
-            // FOR i
-            int i = 0;
-            // Massiv
-            Console.WriteLine("-------FOR-UP-Massiv------");
-            Isik[] isikud = new Isik[10];
-            string[] nimid = new string[10] { "Juku", "Mati", "Kati", "Peeter", "Maria", "Liina", "Karina", "Mary", "Ravil", "Iryna" };
-            string[] aadressid = new string[10] { "Tallinn", "Tartu", "Parnu", "Maardu", "Viljandi", "Voru", "Keila", "Rjapina", "Narva", "Rakvere"};
-                for (i = 0; i < 10; i++) // увеличиваем
-            {
-                //Console.WriteLine(i);
-                Console.WriteLine("Isikukood: ");
-                //Masiiv
-                isikud[i] = new Isik
-                {
-                    Nimi = nimid[i],
-                    Vanus = 50,
-                    Isikukood = Console.ReadLine(),
-                    Aadress = aadressid[i],
-                };
-            }
-                for (i = 0;i < 10; i++)
-            { isikud[i].PrindiInfo(); }
 
-            Console.WriteLine("-------FOR-DOWN-List-----");
-            List<Isik> isikud2 = new List<Isik>(); // list
-            for (int j = i-1; j > -1; j--)  // уменьшаем
-            {
-                //Console.WriteLine(j);
-                Isik isik = new Isik
-                {
-                    Nimi = nimid[j],
-                    Vanus = 50,
-                    Isikukood = "11111111111",
-                    Aadress = aadressid[j]
-                };
-                isikud2.Add(isik);
-            }
-            foreach (Isik isik in isikud2) // перебираем список var - когда не надо определять тип данных Isik - перебираем наш список
-            {
-                isik.PrindiInfo();
-            }
 
-            // WHILE (true)
-            Console.WriteLine("------WHILE-(i>0)---------");
-            while (i > 0)
-            {
-                Console.WriteLine(i);
-                i--;
-            }
-            Console.WriteLine("------DO---------");
-            ConsoleKeyInfo key = new ConsoleKeyInfo();
-            do
-            {
-                Console.WriteLine("Vajuta Backspace");
-                key = Console.ReadKey();
-            }
-            while (key.Key != ConsoleKey.Backspace);
+            //////FOR i
+            //////int i = 0;
+            //////Massiv
+            //////Console.WriteLine("-------FOR-UP-Massiv------");
+            //////Isik[] isikud = new Isik[10];
+            //////string[] nimid = new string[10] { "Juku", "Mati", "Kati", "Peeter", "Maria", "Liina", "Karina", "Mary", "Ravil", "Iryna" };
+            //////string[] aadressid = new string[10] { "Tallinn", "Tartu", "Parnu", "Maardu", "Viljandi", "Voru", "Keila", "Rjapina", "Narva", "Rakvere" };
+            //////Isik[] isikud = funktionide_Class_2_osa.Isikud(nimid.Length, nimid, aadressid);
+
+            //////for (i = 0; i < 10; i++)
+            //////{ isikud[i].PrindiInfo(); }
+
+            //////Console.WriteLine("-------FOR-DOWN-List-----");
+            //////List<Isik> isikud2 = new List<Isik>(); // list
+            //////for (int j = i - 1; j > -1; j--)  // уменьшаем
+            //////{
+            //////    Console.WriteLine(j);
+            //////    Isik isik = new Isik
+            //////    {
+            //////        Nimi = nimid[j],
+            //////        Vanus = 50,
+            //////        Isikukood = "11111111111",
+            //////        Aadress = aadressid[j]
+            //////    };
+            //////    isikud2.Add(isik);
+            //////}
+            //////foreach (Isik isik in isikud2) // перебираем список var - когда не надо определять тип данных Isik - перебираем наш список
+            //////{
+            //////    isik.PrindiInfo();
+            //////}
+
+            //////WHILE(true)
+            //////Console.WriteLine("------WHILE-(i>0)---------");
+            //////while (i > 0)
+            //////{
+            //////    Console.WriteLine(i);
+            //////    i--;
+            //////}
+            //////Console.WriteLine("------DO---------");
+            //////ConsoleKeyInfo key = new ConsoleKeyInfo();
+            //////do
+            //////{
+            //////    Console.WriteLine("Vajuta Backspace");
+            //////    key = Console.ReadKey();
+            //////}
+            //////while (key.Key != ConsoleKey.Backspace);
+
+
+
+
+
 
             // 3 OSA Faillid, Andmetüüdb, IF, CASE, RANDOM, Alamfunktioonid
 
@@ -105,7 +99,7 @@ namespace ules_C
             // I. osa Andmetyybid, IF, Case, Random, Almafunktsioonid
             /*
              Lisame siia kommentaari
-            
+
             int a = 0;
             string tekst = string.Empty;
             string tekst2 = string.Empty;
