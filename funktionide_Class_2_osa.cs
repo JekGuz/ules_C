@@ -36,7 +36,37 @@ namespace ules_C
             }
             return sisestused;
         }
-    }
+
+        public static void ArvaArv()
+        {
+            Random rnd = new Random();
+
+            int peidetudArv = rnd.Next(1, 101); // случайное число от 1 до 100!
+            int katsed = 5; // закончим цикл for
+            int arv = Console.ReadLine();
+
+            Console.WriteLine("Я загадал число от 1 до 100. У тебя есть 5 попыток!");
+            for (int i = 1; i <= katsed; i++)
+            {
+                Console.Write($"Попытка {i}: Введи число: "); // $ как раньше в питоне писала f"{}, arv"
+
+                if (arv == peidetudArv)
+                {
+                    Console.WriteLine("");
+                    break;
+                }
+                else if (arv < peidetudArv)
+                {
+                    Console.WriteLine("Слишком маленькое число.");
+                }
+                else
+                {
+                    Console.WriteLine("Слишком большое число.");
+                }
+            }
+        }
+
+
 
 
         public static List<string> s6nad()
