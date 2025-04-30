@@ -13,21 +13,21 @@ namespace ules_C
         {
 
             // 3 OSA Failikirjutamine ja lugemine
-            ////List<string> kuude_list = new List<string>();
-            ////try
-            ////{
-            ////    string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Kuud.txt");
-            ////    foreach (string rida in File.ReadAllLines(path))
-            ////    {
-            ////        Console.WriteLine("Sisesta mingi tekst: ");
-            ////        string rida = Console.ReadLine();
-            ////        kuude_list.Add(rida);
-            ////    }//@"..\..\..\Kuud.txt" automatne suletab                             
-            ////}
-            ////catch (Exception)
-            ////{
-            ////    Console.WriteLine("Mingi viga failiga");
-            ////}
+            List<string> kuude_list = new List<string>();
+            try
+            {
+                string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Kuud.txt");
+                foreach (string rida in File.ReadAllLines(path))
+                {
+                    Console.WriteLine("Sisesta mingi tekst: ");
+                    string rida = Console.ReadLine();
+                    kuude_list.Add(rida);
+                }//@"..\..\..\Kuud.txt" automatne suletab                             
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Mingi viga failiga");
+            }
 
             ////----------------------------C# Kordused ja massiivid. Teoria+Ülesanded---------------------
             Console.WriteLine("-------Mang Osta Elevant---------");
@@ -56,9 +56,9 @@ namespace ules_C
 
 
 
-            FOR i
-            int i = 0;
-            Massiv
+            //FOR i
+            //int i = 0;
+            //Massiv
             Console.WriteLine("-------FOR-UP-Massiv------");
             Isik[] isikud = new Isik[10];
             string[] nimid = new string[10] { "Juku", "Mati", "Kati", "Peeter", "Maria", "Liina", "Karina", "Mary", "Ravil", "Iryna" };
